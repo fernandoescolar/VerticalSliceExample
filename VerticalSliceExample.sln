@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02B8F281-FCB4-4606-80C9-E7CB32FAA523}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLayerArchitectureApp", "src\NLayerArchitectureApp\NLayerArchitectureApp.csproj", "{845D1CBF-82EC-43A3-826D-14BA7016CB73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VerticalSliceApp", "src\VerticalSliceApp\VerticalSliceApp.csproj", "{9529D94D-DA20-4959-86E3-50A0BC7AF2F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{845D1CBF-82EC-43A3-826D-14BA7016CB73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{845D1CBF-82EC-43A3-826D-14BA7016CB73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{845D1CBF-82EC-43A3-826D-14BA7016CB73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{845D1CBF-82EC-43A3-826D-14BA7016CB73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9529D94D-DA20-4959-86E3-50A0BC7AF2F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9529D94D-DA20-4959-86E3-50A0BC7AF2F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9529D94D-DA20-4959-86E3-50A0BC7AF2F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9529D94D-DA20-4959-86E3-50A0BC7AF2F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{845D1CBF-82EC-43A3-826D-14BA7016CB73} = {02B8F281-FCB4-4606-80C9-E7CB32FAA523}
+		{9529D94D-DA20-4959-86E3-50A0BC7AF2F0} = {02B8F281-FCB4-4606-80C9-E7CB32FAA523}
+	EndGlobalSection
+EndGlobal

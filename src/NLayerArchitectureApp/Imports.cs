@@ -1,0 +1,9 @@
+global using NLayerArchitectureApp.Application;
+global using NLayerArchitectureApp.Domain;
+global using NLayerArchitectureApp.Domain.Entities;
+global using NLayerArchitectureApp.Domain.Repositories;
+global using NLayerArchitectureApp.Infrastructure;
+global using NLayerArchitectureApp.Infrastructure.Data;
+global using System.Collections;
+global using Microsoft.AspNetCore.Http.Extensions;
+global using Microsoft.AspNetCore.Mvc;
