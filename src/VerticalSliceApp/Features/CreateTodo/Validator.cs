@@ -1,17 +1,10 @@
 namespace VerticalSliceApp.Features.CreateTodo;
 
-public class Validator
+public class Validator : AbstractValidator<Command>
 {
-    public string? Error { get; private set; }
-
-    public bool Validate(Command command)
+    public Validator()
     {
-        if (string.IsNullOrWhiteSpace(command.Title ?? string.Empty))
-        {
-            Error = "Title is required";
-            return false;
-        }
-
-        return true;
+        RuleFor(x => x.Title).NotEmpty();
     }
 }
+

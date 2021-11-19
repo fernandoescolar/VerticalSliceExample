@@ -13,6 +13,11 @@ public class Controller : ControllerBase
     {
         var command = new Command { Id = id};
         var model = await _mediator.Send(command, HttpContext.RequestAborted);
-        return Ok(model);
+        if (model.IsFailed)
+        {
+            return Problem(statusCode: 429, detail: string.Join('\n', model.Errors.Select(x => x.Message)));
+        }
+
+        return Ok();
     }
 }

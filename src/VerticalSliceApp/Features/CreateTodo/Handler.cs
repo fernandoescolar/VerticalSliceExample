@@ -1,18 +1,21 @@
 namespace VerticalSliceApp.Features.CreateTodo;
 
-public class Handler
+public class Handler : IRequestHandler<Command, Result>
 {
     private readonly Database _database;
 
     public Handler(Database database)
         => _database = database;
 
-    public Task<Response> HandleAsync(Command command)
+    public async Task<Result> Handle(Command command, CancellationToken cancellationToken)
     {
-        var id = _database.CreateId();
-        var todo = new Todo(id, command.Title, false);
-        _database[id] = new Todo(id, command.Title, false);
+        cancellationToken.ThrowIfCancellationRequested();
 
-        return Task.FromResult(Response.Succeded());
+        var todo = new Todo(0, command.Title, false);
+
+        _database.Add(todo);
+        await _database.SaveChangesAsync(cancellationToken);
+
+        return Result.Ok();
     }
 }

@@ -1,13 +1,11 @@
 ﻿namespace VerticalSliceApp.Data;
 
-public class Database : Hashtable
+public class Database : DbContext
 {
-    private int _counter = 0;
-
-    public int Counter => _counter;
-
-    public int CreateId()
+    public Database(DbContextOptions<Database> options) : base(options)
     {
-        return ++_counter;
+        Database.EnsureCreated();
     }
+
+    public DbSet<Todo> Todos { get; set; }
 }

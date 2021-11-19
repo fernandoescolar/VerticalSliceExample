@@ -7,10 +7,10 @@ public class Service
     public Service(Database database)
         => _database = database;
 
-    public Response GetAllTodos()
+    public async Task<Response> GetAllTodosAsync(CancellationToken cancellationToken)
     {
         var response = new Response();
-        var todos = _database.Values.Cast<Todo>();
+        var todos = await _database.Todos.AsNoTracking().ToListAsync(cancellationToken);
         foreach(var todo in todos)
         {
             response.Add(new ResponseItem { Id = todo.Id, Title = todo.Title, IsDone = todo.IsDone });
